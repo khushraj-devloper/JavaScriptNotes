@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Developer Roadmap</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --badge-bg: #0369a1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .roadmap {
+            position: relative;
+            border-left: 2px solid var(--card-border);
+            margin-left: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .phase {
+            position: relative;
+            margin-bottom: 3rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .phase:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Timeline dot */
+        .phase::before {
+            content: '';
+            position: absolute;
+            left: -2.6rem;
+            top: 1.75rem;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            border: 3px solid var(--bg-color);
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        .phase-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .badge {
+            background-color: var(--badge-bg);
+            color: #e0f2fe;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.4rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .why-box {
+            background-color: rgba(15, 23, 42, 0.6);
+            border-left: 3px solid var(--accent);
+            padding: 0.75rem 1rem;
+            margin: 1rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+        }
+
+        .why-box strong {
+            color: var(--text-main);
+        }
+
+        code {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            padding: 0.15rem 0.35rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.85em;
+            border: 1px solid var(--card-border);
+        }
+
+        @media (max-width: 640px) {
+            .roadmap {
+                margin-left: 0.5rem;
+                padding-left: 1.5rem;
+            }
+            .phase::before {
+                left: -2.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Backend Developer Roadmap</h1>
+            <p>Phase-Based • No Time Limit • Practical Learning Track</p>
+        </header>
+
+        <div class="roadmap">
+
+            <!-- Phase 1 -->
+            <div class="phase">
+                <div class="phase-title">
+                    Phase 1 — JavaScript Basics
+                    <span class="badge">Foundation</span>
+                </div>
+                <div class="why-box">
+                    <strong>Why it matters:</strong> Every backend framework (Express, NestJS) is just JavaScript underneath. Shaky fundamentals here show up as bugs later that look like "framework problems" but aren't.
+                </div>
+                <div class="section-title">What to Learn</div>
+                <ul>
+                    <li>Variables: <code>let</code>, <code>const</code> (and why <code>var</code> is avoided)</li>
+                    <li>Data types: Number, String, Boolean, Object, Array, <code>null</code>, <code>undefined</code>, and <code>typeof</code></li>
+                    <li>Type coercion basics (<code>==</code> vs <code>===</code>)</li>
+                    <li>Input/output (<code>console.log</code>, <code>readline</code> for console input)</li>
+                    <li>Operators: arithmetic, comparison, logical, ternary</li>
+                    <li>Conditions: <code>if</code>, <code>else if</code>, <code>else</code>, <code>switch</code></li>
+                    <li>Loops: <code>for</code>, <code>while</code>, <code>do...while</code>, <code>for...of</code>, <code>for...in</code></li>
+                    <li>Functions: declarations, parameters, default parameters, return values</li>
+                    <li>Arrow functions and how <code>this</code> differs from regular functions</li>
+                </ul>
+                <div class="section-title">Projects</div>
+                <ul>
+                    <li>Console calculator (add/subtract/multiply/divide, handle divide-by-zero)</li>
+                    <li>To-do list in console (add, remove, mark complete, list all — using an array)</li>
+                    <li>Guess-the-number game (with limited attempts and hints)</li>
+                    <li>Simple grade calculator (input marks, output grade using switch)</li>
+                </ul>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="phase">
+                <div class="phase-title">
+                    Phase 2 — Intermediate JavaScript
+                    <span class="badge">Core JS</span>
+                </div>
+                <div class="why-box">
+                    <strong>Why it matters:</strong> <code>map</code>/<code>filter</code>/<code>reduce</code> and destructuring show up constantly in real backend code — shaping API responses, transforming DB query results, and handling request bodies.
+                </div>
+                <div class="section-title">What to Learn</div>
+                <ul>
+                    <li>Arrays: <code>push</code>, <code>pop</code>, <code>shift</code>, <code>unshift</code>, <code>slice</code>, <code>splice</code>, <code>indexOf</code>, <code>includes</code></li>
+                    <li>Objects: property access, dynamic keys, <code>Object.keys/values/entries</code></li>
+                    <li>Array methods: <code>map()</code>, <code>filter()</code>, <code>reduce()</code>, <code>find()</code>, <code>some()</code>, <code>every()</code>, <code>forEach()</code></li>
+                    <li>String methods: <code>split</code>, <code>trim</code>, <code>includes</code>, <code>replace</code>, <code>slice</code></li>
+                    <li>Destructuring (arrays and objects, including nested)</li>
+                    <li>Spread operator (<code>...</code>) for copying/merging</li>
+                    <li>Rest operator (collecting function arguments)</li>
+                    <li>Template literals & Scope (global, function, block; closures)</li>
+                    <li>Callbacks and Higher-order functions</li>
+                </ul>
+                <div class="section-title">Projects</div>
+                <ul>
+                    <li>Student management system (CRUD stored as an array of objects)</li>
+                    <li>Expense tracker (categorize expenses, calculate totals using <code>reduce</code>)</li>
+                    <li>A simple library catalog (filter by author/genre, sort by year)</li>
+                    <li>Closure-based counter/bank account simulator (private state via closures)</li>
+                </ul>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="phase">
+                <div class="phase-title">
+                    Phase 3 — Async JavaScript & Browser APIs
+                    <span class="badge">Critical</span>
+                </div>
+                <div class="why-box">
+                    <strong>Why it matters:</strong> Nearly every bug a junior backend dev hits early on is either "I don't understand async flow" or "I don't understand what a status code means." This phase prevents both.
+                </div>
+                <div class="section-title">What to Learn</div>
+                <ul>
+                    <li>The event loop (call stack, callback queue, microtasks)</li>
+                    <li>Callbacks, "callback hell," and Promises (<code>.then</code>, <code>Promise.all</code>)</li>
+                    <li><code>async/await</code> syntax and error handling with <code>try/catch</code></li>
+                    <li><code>fetch()</code> and working with JSON (<code>JSON.stringify</code>, <code>JSON.parse</code>)</li>
+                    <li>HTTP methods (GET, POST, PUT, PATCH, DELETE) & Status codes</li>
+                    <li>REST API concepts, CORS, and ES Modules (<code>import</code>/<code>export</code>)</li>
+                </ul>
+                <div class="section-title">Projects</div>
+                <ul>
+                    <li>Fetch and display data from a public API rendered in plain HTML</li>
+                    <li>Build a mini REST client: buttons triggering requests against JSONPlaceholder</li>
+                    <li>A "retry with backoff" fetch wrapper for robust error recovery</li>
+                </ul>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="phase">
+                <div class="phase-title">
+                    Phase 4 — HTML & CSS (Just Enough)
+                    <span class="badge">Tooling</span>
+                </div>
+                <div class="why-box">
+                    <strong>Why it matters:</strong> Enough to build a simple form or test page to hit your own APIs, not to become a frontend developer.
+                </div>
+                <div class="section-title">What to Learn</div>
+                <ul>
+                    <li>HTML structure, semantic tags, forms, and input types</li>
+                    <li>CSS basics: selectors, box model, colors, typography</li>
+                    <li>Flexbox (centering things and simple layouts)</li>
+                    <li>Responsive design basics via media queries</li>
+                </ul>
+                <div class="section-title">Projects</div>
+                <ul>
+                    <li>A static HTML signup/login form with basic CSS styling</li>
+                    <li>A simple "API tester" page calling your Phase 3 backend scripts</li>
+                </ul>
+            </div>
+
+            <!-- Phase 5 -->
+            <div class="phase">
+                <div class="phase-title">
+                    Phase 5 — Git & GitHub
+                    <span class="badge">Essential</span>
+                </div>
+                <div class="why-box">
+                    <strong>Why it matters:</strong> Non-negotiable for team workflows, tracking your projects, and job applications.
+                </div>
+                <div class="section-title">What to Learn</div>
+                <ul>
+                    <li><code>git init</code>, <code>add</code>, <code>commit</code>, <code>push</code>, <code>pull</code></li>
+                    <li>Branching, merging, and resolving basic merge conflicts</li>
+                    <li><code>.gitignore</code> configuration (node_modules, .env)</li>
+                    <li>Remotes, forks, pull requests, and README documentation</li>
+                </ul>
+                <div class="section-title">Projects</div>
+                <ul>
+                    <li>Push every project so far to GitHub with clean READMEs</li>
+                    <li>Practice a solo "team" workflow: branch, change, PR, and merge</li>
+                </ul>
+            </div>
+
+            <!-- Phase 6 -->
+            <div class="phase">
+                <div class="phase-title">
+                    Phase 6 — Node.js Fundamentals
+                    <span class="badge">Backend Core</span>
+                </div>
+                <div class="why-box">
+                    <strong>Why it matters:</strong> Bridges the gap between running JavaScript in the browser and running it on a server environment.
+                </div>
+                <div class="section-title">What to Learn</div>
+                <ul>
+                    <li>Node architecture vs browser JS (no DOM, has <code>fs</code>/<code>path</code>)</li>
+                    <li>The Node event loop and non-blocking I/O</li>
+                    <li>NPM ecosystem, <code>package.json</code>, and semantic versioning</li>
+                    <li>Core modules: File system (<code>fs</code>, <code>fs.promises</code>), Path</li>
+                    <li>CommonJS (<code>require</code>) vs ES Modules (<code>import</code>)</li>
+                </ul>
+                <div class="section-title">Projects</div>
+                <ul>
+                    <li>A CLI tool reading a CSV/JSON file to print structured summaries</li>
+                    <li>A simple file-based note-taking CLI stored locally</li>
+                </ul>
+            </div>
+
+            <!-- Phase 7 -->
+            <div class="phase">
+                <div class="phase-title">
+                    Phase 7 — Express.js
+                    <span class="badge">Framework</span>
+                </div>
+                <div class="why-box">
+                    <strong>Why it matters:</strong> The industry standard entry-point framework for building flexible HTTP servers and REST APIs in Node.
+                </div>
+                <div class="section-title">What to Learn</div>
+                <ul>
+                    <li>Routes, route parameters, and query parameters</li>
+                    <li>Middleware (built-in, custom, and third-party like <code>cors</code>, <code>morgan</code>)</li>
+                    <li>Request and Response objects in-depth</li>
+                    <li>REST API design conventions, versioning, and CRUD operations</li>
+                    <li>Environment variables with <code>dotenv</code> and centralized error handling</li>
+                </ul>
+                <div class="section-title">Projects</div>
+                <ul>
+                    <li>User authentication API (signup/login, hashed passwords, protected profile route)</li>
+                    <li>A "notes" or "bookmarks" REST API with full CRUD</li>
+                    <li>A simple blog API with nested resources (posts + comments)</li>
+                </ul>
+            </div>
+
+            <!-- Phase 8 -->
+            <div class="phase">
+                <div class="phase-title">
+                    Phase 8 — Databases & ORMs
+                    <span class="badge">Storage</span>
+                </div>
+                <div class="why-box">
+                    <strong>Why it matters:</strong> Real applications require persistence, transactional integrity, and scalable relational querying.
+                </div>
+                <div class="section-title">What to Learn</div>
+                <ul>
+                    <li>SQL basics: SELECT, INSERT, UPDATE, DELETE, WHERE, LIMIT</li>
+                    <li>PostgreSQL setup (local or hosted via Supabase/Neon)</li>
+                    <li>Relationships: one-to-many, many-to-many, foreign keys, joins</li>
+                    <li>Database transactions and performance indexing</li>
+                    <li>Using an ORM like Prisma for schema management and migrations</li>
+                </ul>
+                <div class="section-title">Projects</div>
+                <ul>
+                    <li>Rebuild your Phase 7 auth API with real PostgreSQL storage</li>
+                    <li>Rebuild the blog API with proper relational schema using Prisma</li>
+                    <li>An e-commerce schema tracking products, categories, and orders</li>
+                </ul>
+            </div>
+
+            <!-- Phase 9 -->
+            <div class="phase">
+                <div class="phase-title">
+                    Phase 9 — Authentication & Security
+                    <span class="badge">Security</span>
+                </div>
+                <div class="why-box">
+                    <strong>Why it matters:</strong> Securing endpoints, managing tokens safely, and preventing vulnerabilities is non-negotiable for production systems.
+                </div>
+                <div class="section-title">What to Learn</div>
+                <ul>
+                    <li>JWT architecture: access tokens, refresh tokens, expiration</li>
+                    <li>Cookies vs sessions, httpOnly flags, and secure headers</li>
+                    <li>Password hashing using <code>bcrypt</code></li>
+                    <li>Rate limiting, input validation via Zod/Joi, and logging basics</li>
+                    <li>Mitigating SQL injection, XSS, and CSRF vulnerabilities</li>
+                </ul>
+                <div class="section-title">Projects</div>
+                <ul>
+                    <li>Add JWT auth flow (access + refresh) to your database API</li>
+                    <li>Implement Role-Based Access Control (RBAC: Admin vs User routes)</li>
+                    <li>Harden an existing project with rate limiting, input validation, and logging</li>
+                </ul>
+            </div>
+
+            <!-- Phase 10 -->
+            <div class="phase">
+                <div class="phase-title">
+                    Phase 10 — Advanced Backend
+                    <span class="badge">Production Ready</span>
+                </div>
+                <div class="why-box">
+                    <strong>Why it matters:</strong> Real-world applications demand real-time events, optimized list endpoints, secure file management, and robust documentation.
+                </div>
+                <div class="section-title">What to Learn</div>
+                <ul>
+                    <li>WebSockets and Socket.io for real-time bi-directional communication</li>
+                    <li>File upload management via <code>multer</code> (local vs cloud storage like S3)</li>
+                    <li>Background tasks, queues, and scheduled jobs (<code>node-cron</code>)</li>
+                    <li>API documentation generation using Swagger / OpenAPI</li>
+                    <li>Advanced list endpoint querying: pagination, filtering, and sorting</li>
+                </ul>
+                <div class="section-title">Projects</div>
+                <ul>
+                    <li>Add real-time comment updates to your blog API using Socket.io</li>
+                    <li>Implement profile picture uploads stored on cloud buckets</li>
+                    <li>Add pagination, filtering, and sorting to e-commerce product endpoints</li>
+                    <li>Document your full API using Swagger for a live, testable docs portal</li>
+                </ul>
+            </div>
+
+            <!-- Phase 11 -->
+            <div class="phase">
+                <div class="phase-title">
+                    Phase 11 — FastAPI (Python Track - Optional)
+                    <span class="badge">Alternative Track</span>
+                </div>
+                <div class="why-box">
+                    <strong>Why it matters:</strong> Expands your technical stack into Python ecosystems, widely valued for data-heavy and AI-adjacent services.
+                </div>
+                <div class="section-title">What to Learn</div>
+                <ul>
+                    <li>Routes, path/query parameters, and automatic request validation</li>
+                    <li>Pydantic models, response typing, and serialization</li>
+                    <li>SQLAlchemy integration with PostgreSQL</li>
+                    <li>Dependency injection architecture (<code>Depends</code>) and custom exceptions</li>
+                </ul>
+                <div class="section-title">Projects</div>
+                <ul>
+                    <li>Rebuild your Node/Express auth API in FastAPI to compare patterns</li>
+                    <li>Build a task management API with user ownership using FastAPI & Postgres</li>
+                </ul>
+            </div>
+
+            <!-- Phase 12 -->
+            <div class="phase">
+                <div class="phase-title">
+                    Phase 12 — TypeScript
+                    <span class="badge">Type Safety</span>
+                </div>
+                <div class="why-box">
+                    <strong>Why it matters:</strong> Large-scale production codebases rely heavily on strict typing to eliminate runtime crashes and improve maintainability.
+                </div>
+                <div class="section-title">What to Learn</div>
+                <ul>
+                    <li>Basic types, type inference, interfaces, and custom types</li>
+                    <li>Typing functions, arrays, objects, and basic generics</li>
+                    <li>Typing Express request/response payloads and custom middleware</li>
+                    <li>Configuring <code>tsconfig.json</code> and build/transpilation workflows</li>
+                </ul>
+                <div class="section-title">Projects</div>
+                <ul>
+                    <li>Rewrite your Phase 9 auth and role-based project entirely in TypeScript</li>
+                    <li>Implement strict DTO typing for your Phase 10 e-commerce API</li>
+                </ul>
+            </div>
+
+            <!-- Phase 13 -->
+            <div class="phase">
+                <div class="phase-title">
+                    Phase 13 — Docker & Deployment
+                    <span class="badge">DevOps</span>
+                </div>
+                <div class="why-box">
+                    <strong>Why it matters:</strong> Ensures your app runs consistently across any hardware environment from development laptops to cloud servers.
+                </div>
+                <div class="section-title">What to Learn</div>
+                <ul>
+                    <li>Docker fundamentals: images, containers, and writing optimized Dockerfiles</li>
+                    <li>Docker Compose for spinning up multi-container apps (Node app + Postgres)</li>
+                    <li>Production environment isolation and configuration</li>
+                    <li>Cloud deployment platforms like Render, Railway, or VPS instances</li>
+                </ul>
+                <div class="section-title">Projects</div>
+                <ul>
+                    <li>Containerize your TypeScript/PostgreSQL/JWT project using Docker Compose and deploy live</li>
+                    <li>Deploy your FastAPI project independently to showcase multi-stack flexibility</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

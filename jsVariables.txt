@@ -1,0 +1,15 @@
+
+
+
+let is used to declare varabiles with block scope  
+
+varaibels decalred with let cannot be re decalred 
+
+variables decalred with let keyword updating  and  accessing is allowed only at that block level 
+
+const is used to declare variables which cannot be reassigned 
+
+
+
+
+
