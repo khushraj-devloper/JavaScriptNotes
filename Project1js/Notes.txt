@@ -1,0 +1,40 @@
+
+
+parsing a html page means compeleting html code in DOM format  
+that a browser or program can understand 
+Parsing an HTML page means reading the HTML code and converting it into 
+a structured format (the DOM) that a browser or program can understand and work with.
+
+How it works in a browser:
+
+HTML Source Code
+The browser receives HTML as plain text from a server or local file.
+
+Tokenization
+The HTML text is broken into tokens (like <html>, <body>, <p>, text nodes, etc.).
+
+Tree Construction
+Tokens are organized into a Document Object Model (DOM) — a tree-like structure representing all elements, attributes, and their hierarchy.
+
+Rendering
+The DOM is then used along with CSS and JavaScript to display the page visually.
+
+Example:
+HTML:
+
+Html
+
+Copy code
+<html>
+  <body>
+    <p>Hello World</p>
+  </body>
+</html>
+Parsing result (DOM tree):
+
+
+Copy code
+Document
+ └── html
+      └── body
+           └── p
