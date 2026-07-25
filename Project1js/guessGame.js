@@ -3,9 +3,10 @@ console.log("Guess the Number Game in JavaScript");
 const name = prompt("Enter your name:");
 console.log("Welcome", name);
 //guess number game using java script and html 
-
+//fucntions use math.random() and Math.floor()  
 // Random number between min and max (inclusive)
 function rand(min, max) {
+
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
