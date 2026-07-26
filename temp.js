@@ -30,3 +30,5 @@ console.log(obj.name,obj.job);
 
 
 
+
+
