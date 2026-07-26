@@ -21,13 +21,17 @@ function isPrime(n) {
 console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13] 
 
 
-function isPos(x){
+function isPos(x,idx,arr){
 
     if(x>0){
+      console.log("current value ",x); 
+    console.log("index of current value ",idx); 
+      console.log("array  is ", arr); 
 
         return true; 
 
     }
+
 }
 let array2=[1,4,2334,-23,23,-12,53,-1,0]; 
 

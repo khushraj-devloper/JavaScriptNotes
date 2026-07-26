@@ -10,3 +10,7 @@ let m=a.join('/')
 console.log(m); 
 console.log(typeof m);
 
+
+
+console.log(typeof m); 
+
