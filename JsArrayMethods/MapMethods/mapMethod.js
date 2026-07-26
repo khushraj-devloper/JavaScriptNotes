@@ -22,3 +22,19 @@ sq_nums.forEach(element=>{
     console.log(element); 
 
 })
+
+
+
+//synatx of map method in javascripot 
+
+const result = numbers.map(function(currentValue, idx, array) {
+
+    console.log("Current Value:", currentValue);
+    console.log("Index:", idx);
+    console.log("Original Array:", array);
+
+    return currentValue + 5;
+
+});
+
+console.log(result);
