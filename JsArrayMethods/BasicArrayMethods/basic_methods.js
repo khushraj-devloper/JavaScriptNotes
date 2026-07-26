@@ -11,3 +11,12 @@ const count=numbers.push(1,2,3); // add three elemtns and return the lenght of a
 
 console.log(count); 
 console.log(numbers); 
+
+
+// pop method remove elemetn from last of array and return that element value  
+
+let elemet_removed=numbers.pop(); 
+
+console.log("Element removed is ",elemet_removed); 
+console.log("Updated array  ")
+console.log(numbers); 
