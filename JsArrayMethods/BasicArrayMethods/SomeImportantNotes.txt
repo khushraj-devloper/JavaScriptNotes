@@ -1,0 +1,6 @@
+
+
+indexOf(elemnt,fromIndex) fromIndex is optional parameter 
+
+If fromIndex >= array.length, the array is not searched and -1 is returned.
+
