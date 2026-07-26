@@ -29,3 +29,6 @@ console.log(beasts.indexOf("bison", 2));//start seraching form index 2nd
 
 console.log(beasts.indexOf("giraffe"));
 // Expected output: -1
+
+
+
