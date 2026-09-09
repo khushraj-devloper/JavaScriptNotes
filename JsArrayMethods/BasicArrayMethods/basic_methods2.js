@@ -6,6 +6,7 @@ console.log(a.length) //length of array
 
 
 let s=["html","css","js"]; 
+console.log(typeof s); 
 
 let string=s.toString(); //this method converts the array to string  
 let n=s.join('|'); //returns a new string  html|css|js
