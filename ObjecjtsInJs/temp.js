@@ -8,21 +8,19 @@
 
 let obj1={
 
-     name:"Rs", 
-     age:"21", 
-     
-}
- 
+     name:"Khushraj", 
+     age:23, 
+
+}  
+
 let obj2={
-
-     name:"Ksr", 
-     age2:"22", 
-     
+      name:"rahul", 
+      age:34 
 }
-let obj3={
 
-    ...obj1,...obj2
-}
-//using spread opreator in java script properoties with same key is overriden by later  object
 
-console.log(obj3); 
+
+
+const {name,age}=obj1; 
+const {name:UserName,age:Userage}=obj2; 
+console.log(name,age,UserName,Userage); 

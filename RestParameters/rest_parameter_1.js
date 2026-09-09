@@ -9,7 +9,9 @@
 function addNum(...numbers){
 
 
-    let sum=0; 
+    let sum=0;  
+    console.log(typeof numbers); 
+    
 
     for(let val of numbers){
 

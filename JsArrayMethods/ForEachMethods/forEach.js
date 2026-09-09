@@ -17,4 +17,7 @@ function sq(x){
     console.log(x*x); 
 
 }
+
 arr.forEach(sq); 
+
+
